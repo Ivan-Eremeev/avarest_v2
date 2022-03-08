@@ -1,0 +1,48 @@
+@import 'mixins';
+
+@include reset(); // Сброс стилей
+
+@import 'mixingrid';
+
+// Переменные для кастомизации Mixingrid
+$columns: 12; // Колличество колонок
+$max-width: 1160px; // Максимальная ширина контейнера
+$gutter: 20px; // Расстояние между колонками
+$offset: 20px; // Поля контейнера
+$offset-sm: 15px; // Поля контейнера на мобилке
+// Брэйкпоинты
+$break_xl: 1400px;
+$break_lg: 1200px;
+$break_md: 1050px;
+$break_sm: 769px;
+$break_xs: 500px;
+
+// Шрифты
+@include font-face("Exo2", "../fonts/exo2/exo-2-v18-latin_cyrillic-300", 300, normal);
+@include font-face("Exo2", "../fonts/exo2/exo-2-v18-latin_cyrillic-300italic", 300, italic);
+@include font-face("Exo2", "../fonts/exo2/exo-2-v18-latin_cyrillic-regular", normal, normal);
+@include font-face("Exo2", "../fonts/exo2/exo-2-v18-latin_cyrillic-600", 600, normal);
+@include font-face("Exo2", "../fonts/exo2/exo-2-v18-latin_cyrillic-700", bold, normal);
+@include font-face("Exo2", "../fonts/exo2/exo-2-v18-latin_cyrillic-900", 900, normal);
+
+@include font-face("Nunito Sans", "../fonts/nunito_sans/nunito-sans-v11-latin_cyrillic-300", 300, normal);
+@include font-face("Nunito Sans", "../fonts/nunito_sans/nunito-sans-v11-latin_cyrillic-regular", normal, normal);
+@include font-face("Nunito Sans", "../fonts/nunito_sans/nunito-sans-v11-latin_cyrillic-600", 600, normal);
+@include font-face("Nunito Sans", "../fonts/nunito_sans/nunito-sans-v11-latin_cyrillic-700", bold, normal);
+
+@include font-face("Source Sans", "../fonts/source_sans_pro/source-sans-pro-v19-latin_cyrillic-regular", normal, normal);
+
+// Цвета
+$blue: #003398;
+$orange: #EE6F0F;
+$ligr: linear-gradient(180deg, #EA7000 0%, #EA6200 0.01%, #FFA048 100%), #FF7A00;
+
+// Подключение файлов
+@import 'blocks/settings';
+@import 'hamburgers/hamburgers';
+@import 'blocks/header';
+@import 'blocks/menu';
+// @import 'blocks/accordion';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
+// @import 'blocks/tabs';

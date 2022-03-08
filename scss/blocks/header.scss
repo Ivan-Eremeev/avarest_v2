@@ -1,0 +1,70 @@
+.header {
+  padding: 10px 0;
+  font-family: "Nunito Sans", sans-serif;
+  color: $blue;
+  .wrapper {
+    max-width: 1320px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    max-width: 110px;
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__social {
+    margin-left: -9px;
+    margin-right: 35px;
+    > a {
+      margin-left: 9px;
+      svg {
+        fill: $orange;
+        transition: 0.2s;
+      }
+      &:hover {
+        svg {
+          fill: $blue;
+        }
+      }
+    }
+  }
+  &__tel {
+    line-height: 1;
+    > a {
+      color: $blue;
+      &:hover {
+        color: $orange;
+      }
+    }
+    > p {
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+  @media (max-width: $break_lg) {
+    .menu {
+      order: 3;
+      width: 100%;
+      margin-top: 20px;
+    }
+    #contactsFrom {
+      order: 2;
+    }
+  }
+  @media (max-width: $break_sm) {
+    #contactsFrom {
+      display: none;
+    }
+    .menu {
+      width: auto;
+      margin-top: 0;
+    }
+  }
+}
