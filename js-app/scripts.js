@@ -231,37 +231,37 @@ $(document).ready(function () {
 	// };
 	// textPrint();
 
-	// // Анимация увеличения значения числа
-	// function countNumber(block) {
-	// 	block.each(function () {
-	// 		var scrollTop = false,
-	// 			countNumberStatus = true,
-	// 			$this = $(this),
-	// 			blockPosition = $this.position().top,
-	// 			valUp = $this.data('val-up'),
-	// 			valTo = $this.data('val-to'),
-	// 			valDuration = $this.data('duration');
-	// 		$this.html(0);
- //      gofunc();
-	// 		$(window).scroll(function () {
- //        gofunc();
-	// 		});
- //      function gofunc() {
- //        scrollTop = $(window).scrollTop() + $(window).height();
- //        if (scrollTop > blockPosition && countNumberStatus) {
- //          $({ numberValue: valUp }).animate({ numberValue: valTo }, {
- //            duration: valDuration,
- //            easing: "swing",
- //            step: function (val) {
- //              $this.html(Math.ceil(val));
- //            }
- //          });
- //          countNumberStatus = false;
- //        }
- //      }
-	// 	});
-	// };
-	// countNumber($(".count-number"));
+	// Анимация увеличения значения числа
+	function countNumber(block) {
+		block.each(function () {
+			var scrollTop = false,
+				countNumberStatus = true,
+				$this = $(this),
+				blockPosition = $this.position().top,
+				valUp = $this.data('val-up'),
+				valTo = $this.data('val-to'),
+				valDuration = $this.data('duration');
+			$this.html(0);
+      gofunc();
+			$(window).scroll(function () {
+        gofunc();
+			});
+      function gofunc() {
+        scrollTop = $(window).scrollTop() + $(window).height();
+        if (scrollTop > blockPosition && countNumberStatus) {
+          $({ numberValue: valUp }).animate({ numberValue: valTo }, {
+            duration: valDuration,
+            easing: "swing",
+            step: function (val) {
+              $this.html(Math.ceil(val));
+            }
+          });
+          countNumberStatus = false;
+        }
+      }
+		});
+	};
+	countNumber($(".count-number"));
 
 	// // Делает активным пункт меню при скролле до блока
 	// function menuItemActive(menu) {
@@ -736,5 +736,39 @@ $(document).ready(function () {
 
 	}
 	replace($('#contacts'), $('#contactsTo'), $('#contactsFrom'), breakSm);
+	replace($('#descriptionBtn'), $('#descriptionBtnTo'), $('#descriptionBtnFrom'), breakSm);
+
+	// Swiper
+	const welcomeSlider = new Swiper('#welcomeSlider', {
+		slidesPerView: 1,
+		effect: 'fade',
+		loop: true,
+		navigation: {
+			nextEl: '.welcome__arrow--next',
+			prevEl: '.welcome__arrow--prev',
+		},
+	});
+
+	// Вставка видео с ютуб
+	function youtubeInsert() {
+		$('.js_youtube').one('click', function () {
+			var $this = $(this),
+				url = iframe_url = "https://www.youtube.com/embed/" + $(this).attr('id') + "?autoplay=1&autohide=1",
+				active = false;
+			var iframe = $('<iframe/>', {
+				'frameborder': '0',
+				'src': iframe_url,
+				'allow': 'autoplay',
+			});
+			// Убираем "Посмотрите видео" при воспроизведении
+			$('.videoOver').hide();
+			// Заменяем миниатюру HTML5 плеером с YouTube
+			if (!active) {
+				$this.append(iframe);
+				active = true;
+			}
+		})
+	}
+	youtubeInsert();
 
 });

@@ -1,0 +1,38 @@
+.count {
+  padding: 75px 0 89px;
+  background-color: $blue;
+  .row {
+    margin-top: -40px;
+    > * {
+      margin-top: 40px;
+    }
+  }
+  &__col {
+    @include col(3);
+    @include col-sm(6);
+  }
+  &__item {
+    text-align: center;
+    color: #fff;
+  }
+  &__num {
+    font-size: 75px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  @media (max-width: $break_sm) {
+    padding: 50px 0;
+  }
+  @media (max-width: $break_xs) {
+    &__num {
+      font-size: 55px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+}

@@ -4,6 +4,7 @@ block title
 	title Главная
 
 block style-libs
+	link(rel="stylesheet", href="css/libs/swiper-bundle.css")
 	//- link(rel="stylesheet", href="css/libs/bootstrap-grid.min.css")
 	//- link(rel="stylesheet", href="css/libs/fullpage.css")
 	//- link(rel="stylesheet", href="css/libs/hamburgers.min.css")
@@ -21,17 +22,124 @@ block content
 		include blocks/header.pug
 		
 		.content
-			.wrapper
 
-				// welcome
-				.welcome
-				
-				//	/welcome
+			// welcome
+			.welcome
+				#welcomeSlider.welcome__slider 
+					.swiper-wrapper
+					
+						.swiper-slide
+							.welcome__slide
+								.welcome__content 
+									.wrapper 
+										.welcome__body.welcome__body--pd
+											h1.welcome__title AVAGreece - производство оливкового масла в греции
+											ul.welcome__list 
+												li Размер пая: от
+													span 450 000р
+												li + Дивиденды: от
+													span 15%
+												li + Капитализация доли
+											p.welcome__text Стань владельцем плантаций олив в Греции
+											.welcome__button 
+												.btn.btn--orange
+													span Подробнее
+											.welcome__blue 
+												div
+													p Вложено: 
+														span 24 млн &#8381;
+													p Плантации: 
+														span 17 Га
+													p Собранно 
+														span 31 тонна
+											.welcome__arrows
+												.welcome__arrow.welcome__arrow--prev.swiper-button-prev
+												.welcome__arrow.welcome__arrow--next.swiper-button-next
+								.welcome__img 
+									img(src="img/welcome.jpg", alt="")
+
+						.swiper-slide
+							.welcome__slide
+								.welcome__content 
+									.wrapper 
+										.welcome__body.welcome__body--pd
+											h1.welcome__title AVAGreece - производство оливкового масла в греции
+											ul.welcome__list 
+												li Размер пая: от
+													span 450 000р
+												li + Дивиденды: от
+													span 15%
+												li + Капитализация доли
+											p.welcome__text Стань владельцем плантаций олив в Греции
+											.welcome__button 
+												.btn.btn--orange
+													span Подробнее
+											.welcome__blue 
+												div
+													p Вложено: 
+														span 24 млн &#8381;
+													p Плантации: 
+														span 17 Га
+													p Собранно 
+														span 31 тонна
+											.welcome__arrows
+												.welcome__arrow.welcome__arrow--prev.swiper-button-prev
+												.welcome__arrow.welcome__arrow--next.swiper-button-next
+								.welcome__img 
+									img(src="img/welcome.jpg", alt="")
+			//	/welcome
+
+			// description
+			.description
+				.wrapper
+					.description__row
+						.description__content 
+							.description__name AVA
+								span REST
+							.description__title Это глобальный проект, совладельцем которго становится каждый участник платформы
+							.description__text Мы популяризируем культуру коллективных инвестиций, чтобы каждый человек мог разумно снижать инвестиционные риски и увеличить доходность вложений за счет объединения знания, опыта и ресурсов
+							#descriptionBtnFrom
+								#descriptionBtn.btn.btn--orange 
+									span Скачать презентацию
+						.description__video
+							#IL-tI7bpNT8.description__block.js_youtube
+								.description__frame
+									img(src="img/video.jpg", alt="")
+								//- .description__play
+								//- 	svg(width="26" height="38" viewBox="0 0 26 38" fill="none" xmlns="http://www.w3.org/2000/svg")
+								//- 		path(d="M0.75293 37.5194V0.480469L25.714 18.9999L0.75293 37.5194Z")
+						#descriptionBtnTo
+			//	/description
+
+			// count
+			.count
+				.wrapper
+					.row 
+						.count__col 
+							.count__item 
+								.count__num.count-number(data-val-up="0" data-val-to="16" data-duration="3000") 16
+								.count__text Компаний <br>партнеров
+						.count__col 
+							.count__item 
+								.count__num.count-number(data-val-up="0" data-val-to="7" data-duration="3000") 7
+								.count__text Филиалов <br>в разных странах
+						.count__col 
+							.count__item 
+								.count__num.count-number(data-val-up="0" data-val-to="14" data-duration="3000") 14
+								.count__text Официальных <br>представителей
+						.count__col 
+							.count__item 
+								.count__num 
+									span.count-number(data-val-up="0" data-val-to="25" data-duration="3000") 25
+									| +
+								.count__text Инвестиционных <br>программ
+			//	/count
 			
 		include blocks/footer.pug
 
 block js-libs
 	script(src="js/libs/jquery.min.js")
+	script(src="js/libs/swiper-bundle.min.js") 
 	//- script(src="js/libs/jquery.fancybox.min.js")
 	//- script(src="js/libs/slick.min.js")
 	//- script(src="js/libs/jquery.matchHeight-min.js")

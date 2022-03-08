@@ -73,4 +73,46 @@ body {
 .content {
   flex-grow: 1;
 }
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 70px;
+  border-radius: 60px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  &--orange {
+    background: $ligr;
+    color: #fff;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      background: linear-gradient(0deg, #EA7000 0%, #EA6200 0.01%, #FFA048 100%), #FF7A00;
+      border-radius: 60px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.2s;
+    }
+    span {
+      position: relative;
+      z-index: 2;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding: 12px 40px;
+  }
+}
 /* /settings */
