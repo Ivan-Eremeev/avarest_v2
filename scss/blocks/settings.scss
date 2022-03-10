@@ -111,8 +111,16 @@ body {
       }
     }
   }
+  &--small {
+    padding: 20px 50px;
+    font-family: "Source Sans", sans-serif;
+    font-size: 18px;
+  }
   @media (max-width: $break_sm) {
     padding: 12px 40px;
+    &--small {
+      padding: 14px 40px;
+    }
   }
 }
 /* /settings */

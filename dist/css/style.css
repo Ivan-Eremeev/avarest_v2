@@ -337,9 +337,17 @@ body {
 .btn--orange:hover:before {
   opacity: 1;
 }
+.btn--small {
+  padding: 20px 50px;
+  font-family: "Source Sans", sans-serif;
+  font-size: 18px;
+}
 @media (max-width: 769px) {
   .btn {
     padding: 12px 40px;
+  }
+  .btn--small {
+    padding: 14px 40px;
   }
 }
 
@@ -1141,5 +1149,231 @@ body {
   }
   .count__text {
     font-size: 16px;
+  }
+}
+
+.legal {
+  padding: 88px 0 71px;
+  position: relative;
+}
+.legal__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.legal__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.legal__img:after {
+  content: "";
+  display: block;
+  background-color: #003398;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.legal__content {
+  position: relative;
+  z-index: 2;
+}
+.legal__col1 {
+  width: 41.6666666667%;
+}
+@media screen and (max-width: 1200px) {
+  .legal__col1 {
+    width: 100%;
+  }
+}
+.legal__col2 {
+  width: 58.3333333333%;
+}
+@media screen and (max-width: 1200px) {
+  .legal__col2 {
+    width: 100%;
+  }
+}
+.legal__title {
+  font-size: 52px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 28px;
+}
+.legal__text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 26px;
+  color: #fff;
+}
+.legal__block {
+  max-width: 700px;
+  padding: 25px 8px 29px 38px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #003398;
+}
+.legal__blockcol1 {
+  width: 25%;
+}
+@media screen and (max-width: 500px) {
+  .legal__blockcol1 {
+    width: 100%;
+  }
+}
+.legal__blockcol2 {
+  width: 75%;
+}
+@media screen and (max-width: 500px) {
+  .legal__blockcol2 {
+    width: 100%;
+  }
+}
+.legal__name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+.legal__icon {
+  width: 107px;
+}
+.legal__icon svg {
+  max-width: 100%;
+}
+.legal__blocktext p {
+  margin-bottom: 20px;
+}
+.legal__btn {
+  margin-top: 48px;
+}
+@media (max-width: 1200px) {
+  .legal__col2 {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 769px) {
+  .legal {
+    padding: 50px 0;
+  }
+  .legal__title {
+    font-size: 24px;
+  }
+  .legal__text {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .legal__block {
+    padding: 20px;
+  }
+  .legal__blockcol1 {
+    text-align: center;
+  }
+  .legal__name {
+    margin-bottom: 20px;
+  }
+  .legal__icon {
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .legal__btn {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+.questions {
+  padding-top: 105px;
+}
+.questions__title {
+  font-size: 52px;
+  font-weight: 600;
+  color: #003398;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.questions .row {
+  margin-left: 0;
+}
+.questions .row > * {
+  padding-left: 0;
+}
+.questions__col {
+  width: 25%;
+}
+@media screen and (max-width: 1200px) {
+  .questions__col {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .questions__col {
+    width: 100%;
+  }
+}
+.questions__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  padding: 67px 30px;
+  position: relative;
+}
+.questions__img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.questions__img:after {
+  content: "";
+  display: block;
+  background-color: #003398;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.questions__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.questions__content {
+  max-width: 320px;
+  position: relative;
+  z-index: 2;
+}
+.questions__subtitle {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 13px;
+}
+.questions__subtitle span {
+  color: #EE6F0F;
+}
+.questions__text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+@media (max-width: 769px) {
+  .questions__subtitle {
+    font-size: 30px;
   }
 }
