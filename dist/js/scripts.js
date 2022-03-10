@@ -748,6 +748,26 @@ $(document).ready(function () {
 			prevEl: '.welcome__arrow--prev',
 		},
 	});
+	
+	const slidercardsSlider = new Swiper('#slidercardsSlider', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		loop: true,
+		navigation: {
+			nextEl: '.slidercards__arrow--next',
+			prevEl: '.slidercards__arrow--prev',
+		},
+		breakpoints: {
+			1050: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			500: {
+				slidesPerView: 2,
+				spaceBetween: 20
+			},
+		}
+	});
 
 	// Вставка видео с ютуб
 	function youtubeInsert() {

@@ -276,8 +276,8 @@ block content
 								span REST 
 								| и всех бизнес-проектов
 							.avacoin__buttons 
-								.btn.btn--orange2 Вложить во все проекты
-								.btn.btn--transparent Выбрать актив
+								.btn.btn--orange2.btn--small Вложить во все проекты
+								.btn.btn--transparent.btn--small Выбрать актив
 			//	/avacoin
 
 			// callback
@@ -297,6 +297,52 @@ block content
 							button(type="submit").btn.btn--orange.btn--small 
 								span Отправить
 			//	/callback
+
+			// slidercards
+			.slidercards
+				.wrapper 
+					h2.slidercards__title Блог проекта
+					#slidercardsSlider.slidercards__slider 
+						.swiper-wrapper
+							.swiper-slide
+								a(href="#").slidercards__item 
+									.slidercards__img 
+										img(src="img/tel.jpg", alt="")
+									.slidercards__content
+										.slidercards__subtitle Подключение раздела Активы
+										.slidercards__text В личном кабинете активирован раздел "Активы". В данном разделе ежемесячно...
+										.slidercards__date 25/12/2021
+							.swiper-slide
+								a(href="#").slidercards__item 
+									.slidercards__img 
+										img(src="img/resort.jpg", alt="")
+									.slidercards__content
+										.slidercards__subtitle Открытие представительства
+										.slidercards__text Мы открыли 17 представительство на Красной поляне в г.Сочи...
+										.slidercards__date 23/12/2021
+							.swiper-slide
+								a(href="#").slidercards__item 
+									.slidercards__img 
+										img(src="img/oil.jpg", alt="")
+									.slidercards__content
+										.slidercards__subtitle Запуск информационного сайта
+										.slidercards__text Запущен промо-сайт инвестиционно целевой программы AVAGreece...
+										.slidercards__date 22/12/2021
+							.swiper-slide
+								a(href="#").slidercards__item 
+									.slidercards__img 
+										img(src="img/tel.jpg", alt="")
+									.slidercards__content
+										.slidercards__subtitle Подключение раздела Активы
+										.slidercards__text В личном кабинете активирован раздел "Активы". В данном разделе ежемесячно...
+										.slidercards__date 25/12/2021
+						.slidercards__arrows
+							.slidercards__arrow.slidercards__arrow--prev.swiper-button-prev
+							.slidercards__arrow.slidercards__arrow--next.swiper-button-next
+					.slidercards__btn 
+						.btn.btn--orange.btn--small 
+							span Все новости
+			//	/slidercards
 			
 		include blocks/footer.pug
 
