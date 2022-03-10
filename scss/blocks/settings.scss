@@ -62,8 +62,8 @@ body {
   -webkit-box-shadow: inset 0 0 0 50px #fff !important;
 }
 *::placeholder {
-  color: #8D89B6;
-  opacity: 1;
+  color: $blue;
+  opacity: 0.5;
 }
 .page {
   min-height: 100%;
@@ -79,11 +79,14 @@ body {
   align-items: center;
   padding: 20px 70px;
   border-radius: 60px;
+  border: none;
+  outline: none;
   font-family: "Nunito Sans", sans-serif;
   font-size: 20px;
   text-align: center;
   cursor: pointer;
   user-select: none;
+  transition: 0.2s;
   &--orange {
     background: $ligr;
     color: #fff;
@@ -109,6 +112,21 @@ body {
       &:before {
         opacity: 1;
       }
+    }
+  }
+  &--orange2 {
+    background-color: $orange;
+    &:hover {
+      background-color: lighten($orange, 10%);
+    }
+  }
+  &--transparent {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    &:hover {
+      border-color: $orange;
+      color: $orange;
     }
   }
   &--small {

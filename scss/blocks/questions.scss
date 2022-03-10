@@ -68,6 +68,9 @@
     color: #fff;
   }
   @media (max-width: $break_sm) {
+    &__title {
+      font-size: 40px;
+    }
     &__subtitle {
       font-size: 30px;
     }

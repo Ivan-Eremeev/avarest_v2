@@ -207,6 +207,96 @@ block content
 										| Rest
 									p.questions__text Совместный запуск проекта, покупка франшизы AvaRest
 			//	/questions
+
+			// cards
+			.cards
+				.wrapper
+					h2.cards__title Инвестиционные программы
+					.cards__cards 
+						.row 
+							.cards__col 
+								a(href="#").cards__item 
+									.cards__img 
+										img(src="img/card_1.jpg", alt="")
+									.cards__content 
+										.cards__place Греция
+										h3.cards__subtitle Производство оливкового масла в Греции
+										.cards__pay Стоимость пая
+										.cards__price от 550 000₽
+									.cards__btn 
+										.btn.btn--orange 
+											span Подробнее
+							.cards__col 
+								a(href="#").cards__item 
+									.cards__img 
+										img(src="img/card_2.jpg", alt="")
+									.cards__content 
+										.cards__place Москва
+										h3.cards__subtitle Лесной ЭКО-Отель «Стрельчиха»
+										.cards__pay Стоимость пая
+										.cards__price от 400 000₽
+									.cards__btn 
+										.btn.btn--orange 
+											span Подробнее
+							.cards__col 
+								a(href="#").cards__item 
+									.cards__img 
+										img(src="img/card_3.jpg", alt="")
+									.cards__content 
+										.cards__place Город
+										h3.cards__subtitle Бренд детской одежды Polina Kids
+										.cards__pay Стоимость пая
+										.cards__price от 450 000₽
+									.cards__btn 
+										.btn.btn--orange 
+											span Подробнее
+							.cards__col 
+								a(href="#").cards__item 
+									.cards__img 
+										img(src="img/card_4.jpg", alt="")
+									.cards__content 
+										.cards__place Москва
+										h3.cards__subtitle Мастерская настольных игр
+										.cards__pay Стоимость пая
+										.cards__price от 75 000₽
+									.cards__btn 
+										.btn.btn--orange 
+											span Подробнее
+			//	/cards
+
+			// avacoin
+			.avacoin
+				.wrapper 
+					.avacoin__row 
+						.avacoin__content1 
+							h2.avacoin__title Целевая программа AVACOIN
+							p.avacoin__text МПК «Аварест» аккумулирует средства и выступая от лица пайщиков кооператива, в рамках целевой программы приобретает акции АО "Аварест Инвест", после чего делит выкупленный объем на паи (цифровые доли AVACOIN)
+						.avacoin__content2 
+							.avacoin__subtitle Купи акции «АО Аварест Инвест» и стань совладельцем платформы AVA
+								span REST 
+								| и всех бизнес-проектов
+							.avacoin__buttons 
+								.btn.btn--orange2 Вложить во все проекты
+								.btn.btn--transparent Выбрать актив
+			//	/avacoin
+
+			// callback
+			.callback
+				.callback__img 
+					img(src="img/callback.jpg", alt="")
+				.wrapper
+					h2.callback__title Остались вопросы или нужна консультация?
+					form(action="#").callback__form 
+						.callback__subtitle Заполните форму
+						.callback__text и наш специалист оперативно с вами свяжется
+						.callback__input 
+							input(type="text" placeholder="Введите ваше имя")
+						.callback__input 
+							input(type="text" placeholder="Введите ваше телефон")
+						.callback__btn 
+							button(type="submit").btn.btn--orange.btn--small 
+								span Отправить
+			//	/callback
 			
 		include blocks/footer.pug
 

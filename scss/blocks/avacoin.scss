@@ -1,0 +1,86 @@
+.avacoin {
+  padding: 52px 0 82px;
+  background-color: $blue;
+  color: #fff;
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -20px;
+    margin-top: -40px;
+  }
+  &__content1 {
+    max-width: 540px;
+    padding-left: 20px;
+    margin-top: 40px;
+  }
+  &__content2 {
+    max-width: 520px;
+    padding-left: 20px;
+    margin-top: 40px;
+  }
+  &__title {
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 19px;
+  }
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &__subtitle {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 43px;
+    span {
+      color: $orange;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: flex-start;
+    margin-left: -15px;
+    margin-top: -20px;
+    .btn {
+      flex-grow: 1;
+      padding: 20px 20px;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: $break_lg) {
+    &__row {
+      flex-wrap: wrap;
+    }
+    &__content1 {
+      max-width: none;
+    }
+    &__content2 {
+      max-width: none;
+    }
+    &__buttons {
+      .btn {
+        flex-grow: 0;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding: 50px 0;
+    &__title {
+      font-size: 35px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__subtitle {
+      font-size: 20px;
+    }
+    &__buttons {
+      flex-wrap: wrap;
+      .btn {
+        padding: 14px 20px;
+      }
+    }
+  }
+}
