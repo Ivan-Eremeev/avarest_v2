@@ -10,6 +10,10 @@
   &__slider {
     position: relative;
     overflow: hidden;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   &__arrows {
     
@@ -36,6 +40,9 @@
     background-color: $blue;
     border-radius: 8px;
     color: #fff;
+    &:hover {
+      box-shadow: 0  5px 20px rgba(0,0,0,.4);
+    }
   }
   &__img {
     height: 202px;
