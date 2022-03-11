@@ -628,7 +628,7 @@ body {
 }
 
 .header__logo {
-  max-width: 110px;
+  max-width: 160px;
 }
 
 .header__contacts {
@@ -737,8 +737,9 @@ body {
 }
 
 .welcome__title {
+  max-width: 550px;
   padding-left: 50px;
-  font-size: 68px;
+  font-size: 52px;
   font-weight: bold;
   line-height: 1.05;
   margin-bottom: 30px;
